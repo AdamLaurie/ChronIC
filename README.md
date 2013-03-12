@@ -50,7 +50,7 @@ Build:
 
   Project/Build Project
 
-Note that if you don't want to go to the trouble of building drom source, I've 
+Note that if you don't want to go to the trouble of building from source, I've 
 included the current 433 and 868 compiled versions in the '433MHz - Unrestricted CCS Platinum'
 and '868MHz - Unrestricted CCS Platinum' directories.
 
