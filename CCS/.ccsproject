@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?ccsproject version="1.0"?>
+
+<projectOptions>
+<deviceVariant value="CC430F6137"/>
+<deviceEndianness value="little"/>
+<codegenToolVersion value="3.2.1"/>
+<linkerCommandFile value="lnk_cc430f6137.cmd"/>
+<rts value="rts430x.lib"/>
+<defaultAssemblyOnly value="false"/>
+<deviceFamily value="MSP430"/>
+<connection value="common/targetdb/connections/TIMSP430-USB.xml"/>
+<isTargetManual value="false"/>
+</projectOptions>

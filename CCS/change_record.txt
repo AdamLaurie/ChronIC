@@ -1,0 +1,38 @@
+V1.6 (21.11.2010)
+Fixed following bugs
+- rfsimpliciti.c/simpliciti_sync_decode_ap_cmd_callback(),
+- timer.c/TIMER0_A0_ISR(),							LCD shows "done" after successfully received data
+- main.c/wakeup_event(),
+- rfbsl.c/sx_rfbsl()								rfBSL requires two button presses in order to update watch 
+- timer.c/Timer0_A3_Start()							Fixed register read (Asynchronous)
+- timer.c/Timer0_A4_Delay() 						Fixed register read (Asynchronous)
+													Avoid unwanted flag changes caused by interrupt methods
+													After timeout the accelerometer menu shows "----"
+- port.c/PORT2_ISR() and timer.c/TIMER0_A0_ISR()	Changes the menu if the pressed time from STAR or NUM button are between "short(50ms)" and "long(3s)" 
+													The backlight stays 3 seconds on
+- display.c 										Removed file display1.c. The content is now in display.c 
+- display.h 										Fixed LCD_UNIT_L1_PER_S_MASK bit
+
+Other changes:
+- adc12.c and adc12.h       						Removed commented function and #defines
+- battery.c											Removed commented function
+- DCO settling time									Set to 375000 cycles
+__________________________________________________________________________________________________________________________________________________
+V1.5 (16.03.2010)
+Fixed following bugs
+- main.c/init_application()							Changed XT1 drive level to highest to avoid ACLK noise when turning on backlight.
+- main.c/wakeup_event(), timer.c/TIMER0_A0_ISR()	Modified key lock procedure.
+- vti_ps.c/ps_get_temp()							Negative °C are now converted correctly to Kelvin
+- altitude.c/mx_altitude()							Enabled fast mode when changing altitude offset
+- ports.c/PORT2_ISR()								Disabled stopwatch stop when watch buttons are locked
+
+Other changes
+- main.c/read_calibration_values()					Added range check for rf_frequoffset variable
+													Added bytes for altitude offset correction and s/w version
+- altitude.h, altitude.c							Added initial altitude offset correction 
+- SimpliciTI										Added SimpliciTI sources to project. Upgraded to Version 1.1.1.
+- RFBSL												Added wireless update support
+- Button names										Changed button names from M1/M2/S1/S2/BL to STAR/NUM/UP/DOWN/BACKLIGHT
+__________________________________________________________________________________________________________________________________________________													
+V1.4 (22.11.2009)
+First version released to manufacturing.
