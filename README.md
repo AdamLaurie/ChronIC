@@ -18,7 +18,7 @@ component of the Chronos dev kit:
 
 A worked example of hacking my doorbell can be found here:
 
-  <BLOG>
+  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html
 
 INSTALLATION
 ============
