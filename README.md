@@ -70,7 +70,11 @@ Change directory to the 'python' folder in the git repo.
 Create a file in /etc/udev/rules.d called 20-chronos.rules with the following
 line in it:
 
-  UBSYSTEMS=="usb" ATTRS{idVendor}=="0451" ATTRS{idProduct}=="16a6" MODE:="0666" SYMLINK+="CHRONOS"
+  SUBSYSTEMS=="usb" ATTRS{idVendor}=="0451" ATTRS{idProduct}=="16a6" MODE:="0666" SYMLINK+="CHRONOS"
+
+NOTE: The idVendor & idProduct will need to be replaced by your own device's IDs... can be found by ...
+typing "lsusb" into a terminal after inserting your usb access point - the two are seperated by a colon.
+
 
 Reload the udev rules:
 
