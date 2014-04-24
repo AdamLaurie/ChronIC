@@ -35,6 +35,12 @@ To achieve this, much of the original functionality is commented out, but
 if you have access to the unrestricted compiler it should be easy enough
 to re-enable.
 
+It's also possible to bypass this restriction altogether, as it's enforced by 
+the IDE not the compiler/linker, so when the size limit is reached all you
+need to do is drop to a shell and run make manually, e.g.
+
+  'cd CCS/868MHz\ -\ Unrestricted\ CCS\ Platinum && make clean ChronIC_868MHz.out'
+
 I do my main development under Linux but it's also tested and working under
 Windows.
 

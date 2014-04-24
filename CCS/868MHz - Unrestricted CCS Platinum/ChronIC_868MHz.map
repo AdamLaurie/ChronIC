@@ -1,10 +1,10 @@
 ******************************************************************************
-                  MSP430 Linker Unix v4.1.2                    
+                  MSP430 Linker Unix v4.2.1                    
 ******************************************************************************
->> Linked Mon Mar 11 11:25:57 2013
+>> Linked Thu Apr 24 10:23:17 2014
 
 OUTPUT FILE NAME:   <ChronIC_868MHz.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0000c296
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000c170
 
 
 MEMORY CONFIGURATION
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOB                 00001900   00000080  00000000  00000080  RWIX
   INFOA                 00001980   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00000ffe  00000517  00000ae7  RWIX
-  FLASH                 00008000   00007f80  0000533b  00002c45  RWIX
+  FLASH                 00008000   00007f80  00005233  00002d4d  RWIX
   INT00                 0000ff80   00000002  00000000  00000002  RWIX
   INT01                 0000ff82   00000002  00000000  00000002  RWIX
   INT02                 0000ff84   00000002  00000000  00000002  RWIX
@@ -143,280 +143,276 @@ section   page    origin      length       input sections
                   00002bac    00000002     rts430x.lib : boot.obj (.stack)
                   00002bae    0000004e     --HOLE--
 
-.text      0    00008000    00004d3e     
-                  00008000    00000416     rfsimpliciti.obj (.text:simpliciti_sync_decode_ap_cmd_callback)
-                  00008416    0000021e     user.obj (.text:set_value)
-                  00008634    000001f4     clock.obj (.text:mx_time)
-                  00008828    000001e6     ports.obj (.text:_isr:PORT2_ISR)
-                  00008a0e    000001de     date.obj (.text:mx_date)
-                  00008bec    000001d6     timer.obj (.text:_isr:TIMER0_A0_ISR)
-                  00008dc2    000001a6     chronic.obj (.text:WriteRfSettings)
-                  00008f68    00000196     mrfi.obj (.text:MRFI_Init)
-                  000090fe    0000016a     test.obj (.text:test_mode)
-                  00009268    00000160     clock.obj (.text:display_time)
-                  000093c8    0000014e     nwk_link.obj (.text:nwk_link)
-                  00009516    0000014c     nwk_link.obj (.text:smpl_send_link_reply$34)
-                  00009662    00000130     rts430x.lib : fs_add.obj (.text)
-                  00009792    0000012a     main.obj (.text:wakeup_event)
-                  000098bc    00000126     stopwatch.obj (.text:display_stopwatch)
-                  000099e2    00000116     main.obj (.text:display_update)
-                  00009af8    000000f8     chronic.obj (.text:chronic_tx)
-                  00009bf0    000000f8     alarm.obj (.text:mx_alarm)
-                  00009ce8    000000f6     nwk_join.obj (.text:nwk_join)
-                  00009dde    000000f2     mrfi.obj (.text:Mrfi_SyncPinRxIsr$25)
-                  00009ed0    000000f0     stopwatch.obj (.text:stopwatch_tick)
-                  00009fc0    000000dc     nwk_QMgmt.obj (.text:nwk_QfindOldest)
-                  0000a09c    000000d4     display.obj (.text:display_chars)
-                  0000a170    000000d2     nwk.obj (.text:nwk_allocateLocalRxPort)
-                  0000a242    000000ca     date.obj (.text:display_date)
-                  0000a30c    000000c6     mrfi.obj (.text:MRFI_Transmit)
-                  0000a3d2    000000c4     alarm.obj (.text:display_alarm)
-                  0000a496    000000c4     display.obj (.text:int_to_array)
-                  0000a55a    000000c0     main.obj (.text:init_application)
-                  0000a61a    000000c0     rfsimpliciti.obj (.text:simpliciti_sync_get_data_callback)
-                  0000a6da    000000ba     chronic.obj (.text:do_tx)
-                  0000a794    000000b6     rts430x.lib : fs_mpy.obj (.text)
-                  0000a84a    000000b4     main_ED_BM.obj (.text:simpliciti_link)
-                  0000a8fe    000000b2     nwk_api.obj (.text:SMPL_Ioctl)
-                  0000a9b0    000000a2     main_ED_BM.obj (.text:simpliciti_main_sync)
-                  0000aa52    0000009c     nwk_frame.obj (.text:nwk_retrieveFrame)
-                  0000aaee    00000096     rf1a.obj (.text:Strobe)
-                  0000ab84    0000008e     rts430x.lib : fs_div.obj (.text)
-                  0000ac12    0000008c     nwk_frame.obj (.text:dispatchFrame$27)
-                  0000ac9e    0000008c     nwk.obj (.text:nwk_isConnectionValid)
-                  0000ad2a    0000008c     main.obj (.text:read_calibration_values)
-                  0000adb6    0000008c     rfsimpliciti.obj (.text:start_simpliciti_sync)
-                  0000ae42    0000008a     nwk_frame.obj (.text:nwk_buildFrame)
-                  0000aecc    00000086     chronic.obj (.text:config_doorbell)
-                  0000af52    00000082     date.obj (.text:get_numberOfDays)
-                  0000afd4    00000082     nwk.obj (.text:nwk_nwkInit)
-                  0000b056    0000007c     nwk_frame.obj (.text:nwk_sendAckReply)
-                  0000b0d2    0000007a     timer.obj (.text:_isr:TIMER0_A1_5_ISR)
-                  0000b14c    00000076     nwk_QMgmt.obj (.text:nwk_QfindSlot)
-                  0000b1c2    00000074     battery.obj (.text:battery_measurement)
-                  0000b236    00000072     display.obj (.text:display_char)
-                  0000b2a8    00000072     mrfi.obj (.text:mrfiRadioInterfaceCmdStrobe)
-                  0000b31a    00000068     adc12.obj (.text:adc12_single_conversion)
-                  0000b382    00000068     nwk_link.obj (.text:smpl_send_unlink_reply$34)
-                  0000b3ea    00000066     nwk_api.obj (.text:SMPL_SendOpt)
-                  0000b450    00000062     mrfi.obj (.text:MRFI_RadioIsr)
-                  0000b4b2    00000060     timer.obj (.text:Timer0_A4_Delay)
-                  0000b512    0000005e     battery.obj (.text:display_battery_V)
-                  0000b570    0000005e     main.obj (.text:init_global_variables)
-                  0000b5ce    0000005e     display.obj (.text:write_lcd_mem)
-                  0000b62c    0000005c     chronic.obj (.text:WriteBurstPATable)
-                  0000b688    0000005c     clock.obj (.text:clock_tick)
-                  0000b6e4    0000005a     display.obj (.text:clear_line)
-                  0000b73e    0000005a     nwk_ioctl.obj (.text:nwk_radioControl)
-                  0000b798    00000058     rts430x.lib : div32u.obj (.text)
-                  0000b7f0    00000052     nwk_ioctl.obj (.text:nwk_rawSend)
-                  0000b842    0000004c     date.obj (.text:add_day)
-                  0000b88e    0000004c     ports.obj (.text:button_repeat_function)
-                  0000b8da    0000004c     rts430x.lib : fs_toul.obj (.text)
-                  0000b926    0000004c     rfbsl.obj (.text:sx_rfbsl)
-                  0000b972    0000004a     rts430x.lib : fs_cmp.obj (.text)
-                  0000b9bc    0000004a     buzzer.obj (.text:toggle_buzzer)
-                  0000ba06    00000048     nwk_api.obj (.text:SMPL_Receive)
-                  0000ba4e    00000048     buzzer.obj (.text:start_buzzer)
-                  0000ba96    00000046     pmm.obj (.text:SetVCoreUp)
-                  0000badc    00000046     rts430x.lib : autoinit.obj (.text:_auto_init)
-                  0000bb22    00000046     display.obj (.text:display_hours)
-                  0000bb68    00000046     mrfi.obj (.text:mrfiRadioInterfaceReadReg)
-                  0000bbae    00000046     rts430x.lib : fs_tou.obj (.text)
-                  0000bbf4    00000044     rf1a.obj (.text:WriteBurstReg)
-                  0000bc38    00000044     nwk_ping.obj (.text:smpl_send_ping_reply$32)
-                  0000bc7c    00000040     rts430x.lib : div32s.obj (.text)
-                  0000bcbc    0000003e     mrfi.obj (.text:Mrfi_RxAddrIsFiltered$25)
-                  0000bcfa    0000003e     rts430x.lib : lsl32.obj (.text:l_lsl_const)
-                  0000bd38    0000003c     nwk.obj (.text:nwk_findPeer)
-                  0000bd74    0000003c     nwk.obj (.text:nwk_getNextConnection)
-                  0000bdb0    0000003c     nwk.obj (.text:nwk_isLinkDuplicate)
-                  0000bdec    0000003c     stopwatch.obj (.text:update_stopwatch_timer)
-                  0000be28    00000038     rf1a.obj (.text:WriteSingleReg)
-                  0000be60    00000038     nwk.obj (.text:initializeConnection$30)
-                  0000be98    00000038     main.obj (.text:main)
-                  0000bed0    00000036     nwk_mgmt.obj (.text:nwk_processMgmt)
-                  0000bf06    00000036     rts430x.lib : fs_itof.obj (.text)
-                  0000bf3c    00000034     mrfi.obj (.text:MRFI_ReplyDelay)
-                  0000bf70    00000034     mrfi.obj (.text:mrfiRadioInterfaceWriteReg)
-                  0000bfa4    00000034     mrfi.obj (.text:mrfiRadioInterfaceWriteTxFifo)
-                  0000bfd8    00000032     radio.obj (.text:radio_reset)
-                  0000c00a    00000032     rts430x.lib : fs_ultof.obj (.text)
-                  0000c03c    00000032     alarm.obj (.text:sx_alarm)
-                  0000c06e    00000030     chronic.obj (.text:display_doorbell)
-                  0000c09e    00000030     mrfi.obj (.text:mrfiRadioInterfaceReadRxFifo)
-                  0000c0ce    00000030     nwk.obj (.text:nwk_isValidReply)
-                  0000c0fe    00000030     nwk_link.obj (.text:nwk_linkInit)
-                  0000c12e    00000030     nwk_ioctl.obj (.text:nwk_rawReceive)
-                  0000c15e    00000030     nwk_frame.obj (.text:nwk_sendFrame)
-                  0000c18e    0000002e     mrfi.obj (.text:Mrfi_CalculateRssi$25)
-                  0000c1bc    0000002c     mrfi.obj (.text:Mrfi_RxModeOff$25)
-                  0000c1e8    0000002c     nwk_api.obj (.text:SMPL_Init)
-                  0000c214    0000002c     nwk_QMgmt.obj (.text:nwk_QadjustOrder)
-                  0000c240    0000002c     rts430x.lib : div16s.obj (.text)
-                  0000c26c    0000002a     timer.obj (.text:Timer0_A3_Start)
-                  0000c296    0000002a     rts430x.lib : boot.obj (.text:_isr:_c_int00_noexit)
-                  0000c2c0    0000002a     rfbsl.obj (.text:display_rfbsl)
-                  0000c2ea    0000002a     display.obj (.text:lcd_init)
-                  0000c314    00000028     nwk.obj (.text:map_lid2idx$30)
-                  0000c33c    00000028     nwk.obj (.text:nwk_getConnInfo)
-                  0000c364    00000028     nwk_join.obj (.text:nwk_joinInit)
-                  0000c38c    00000026     pmm.obj (.text:SetVCore)
-                  0000c3b2    00000026     pmm.obj (.text:SetVCoreDown)
-                  0000c3d8    00000026     nwk_link.obj (.text:handleLinkRequest$34)
-                  0000c3fe    00000026     ports.obj (.text:init_buttons)
-                  0000c424    00000026     nwk.obj (.text:nwk_checkConnInfo)
-                  0000c44a    00000026     nwk_globals.obj (.text:nwk_globalsInit)
-                  0000c470    00000024     mrfi.obj (.text:MRFI_SetRxAddrFilter)
-                  0000c494    00000024     mrfi.obj (.text:MRFI_Sleep)
-                  0000c4b8    00000024     rts430x.lib : memcmp.obj (.text:memcmp)
-                  0000c4dc    00000024     nwk_ping.obj (.text:nwk_processPing)
-                  0000c500    00000024     rts430x.lib : fs_utof.obj (.text)
-                  0000c524    00000022     bsp.obj (.text:BSP_Delay)
-                  0000c546    00000022     mrfi.obj (.text:MRFI_WakeUp)
-                  0000c568    00000022     display.obj (.text:display_value)
-                  0000c58a    00000022     nwk_link.obj (.text:nwk_processLink)
-                  0000c5ac    00000022     main.obj (.text:process_requests)
-                  0000c5ce    00000022     rts430x.lib : mult32_f5hw.obj (.text)
-                  0000c5f0    00000022     stopwatch.obj (.text:start_stopwatch)
-                  0000c612    00000020     mrfi.obj (.text:MRFI_EnableRxAddrFilter)
-                  0000c632    00000020     nwk_frame.obj (.text:MRFI_RxCompleteISR)
-                  0000c652    00000020     mrfi.obj (.text:MRFI_RxIdle)
-                  0000c672    00000020     mrfi.obj (.text:MRFI_RxOn)
-                  0000c692    00000020     radio.obj (.text:_isr:radio_ISR)
-                  0000c6b2    00000020     nwk_frame.obj (.text:nwk_frameInit)
-                  0000c6d2    00000020     clock.obj (.text:reset_clock)
-                  0000c6f2    00000020     stopwatch.obj (.text:reset_stopwatch)
-                  0000c712    00000020     buzzer.obj (.text:stop_buzzer)
-                  0000c732    0000001e     mrfi.obj (.text:MRFI_SetLogicalChannel)
-                  0000c750    0000001e     mrfi.obj (.text:Mrfi_DelayUsecSem$25)
-                  0000c76e    0000001e     display.obj (.text:display_am_pm_symbol)
-                  0000c78c    0000001e     display.obj (.text:display_symbol)
-                  0000c7aa    0000001e     rts430x.lib : memmov.obj (.text:memmove)
-                  0000c7c8    0000001e     nwk_globals.obj (.text:nwk_setMyAddress)
-                  0000c7e6    0000001e     rfsimpliciti.obj (.text:sx_sync)
-                  0000c804    0000001c     mrfi.obj (.text:MRFI_SetRFPwr)
-                  0000c820    0000001c     alarm.obj (.text:check_alarm)
-                  0000c83c    0000001c     display.obj (.text:clear_display_all)
-                  0000c858    0000001c     nwk_QMgmt.obj (.text:nwk_QInit)
-                  0000c874    0000001c     nwk_ioctl.obj (.text:nwk_deviceAddress)
-                  0000c890    0000001c     nwk.obj (.text:nwk_putNumObjectIntoMsg)
-                  0000c8ac    0000001a     mrfi.obj (.text:Mrfi_DelayUsec$25)
-                  0000c8c6    0000001a     mrfi.obj (.text:Mrfi_RandomBackoffDelay$25)
-                  0000c8e0    0000001a     rts430x.lib : mult1632_f5hw.obj (.text:__mpyul)
-                  0000c8fa    0000001a     adc12.obj (.text:_isr:ADC12ISR)
-                  0000c914    0000001a     stopwatch.obj (.text:stop_stopwatch)
-                  0000c92e    00000018     chronic.obj (.text:chronic_config_rf)
-                  0000c946    00000018     clock.obj (.text:convert_hour_to_12H_format)
-                  0000c95e    00000018     test.obj (.text:display_all_on)
-                  0000c976    00000018     nwk_join.obj (.text:nwk_processJoin)
-                  0000c98e    00000018     alarm.obj (.text:reset_alarm)
-                  0000c9a6    00000016     mrfi.obj (.text:MRFI_RandomByte)
-                  0000c9bc    00000016     mrfi.obj (.text:Mrfi_RxModeOn$25)
-                  0000c9d2    00000016     rf1a.obj (.text:ReadSingleReg)
-                  0000c9e8    00000016     ports.obj (.text:button_repeat_on)
-                  0000c9fe    00000016     clock.obj (.text:display_selection_Timeformat1)
-                  0000ca14    00000016     rts430x.lib : div16u.obj (.text)
-                  0000ca2a    00000016                 : mult16_f5hw.obj (.text)
-                  0000ca40    00000016     stopwatch.obj (.text:sx_stopwatch)
-                  0000ca56    00000014     timer.obj (.text:Timer0_Init)
-                  0000ca6a    00000014     buzzer.obj (.text:countdown_buzzer)
-                  0000ca7e    00000014     test.obj (.text:display_all_off)
-                  0000ca92    00000014     rfsimpliciti.obj (.text:display_sync)
-                  0000caa6    00000014     nwk_api.obj (.text:ioctlPreInitAccessIsOK$28)
-                  0000caba    00000014     stopwatch.obj (.text:is_stopwatch)
-                  0000cace    00000014     date.obj (.text:reset_date)
-                  0000cae2    00000012     rts430x.lib : memcpy.obj (.text:memcpy)
-                  0000caf4    00000012                 : memset.obj (.text:memset)
-                  0000cb06    00000012     nwk_globals.obj (.text:nwk_getMyAddress)
-                  0000cb18    00000012     nwk_join.obj (.text:nwk_setJoinToken)
-                  0000cb2a    00000012     nwk_link.obj (.text:nwk_setLinkToken)
-                  0000cb3c    00000012     radio.obj (.text:open_radio)
-                  0000cb4e    00000012     battery.obj (.text:reset_batt_measurement)
-                  0000cb60    00000010     bsp.obj (.text:BSP_InitBoard)
-                  0000cb70    00000010     mrfi.obj (.text:MRFI_DelayMs)
-                  0000cb80    00000010     rf1a.obj (.text:ResetRadioCore)
-                  0000cb90    00000010     radio.obj (.text:close_radio)
-                  0000cba0    00000010     radio.obj (.text:radio_powerdown)
-                  0000cbb0    0000000e     clock.obj (.text:is_hour_am)
-                  0000cbbe    0000000e     stopwatch.obj (.text:mx_stopwatch)
-                  0000cbcc    0000000e     display.obj (.text:set_blink_rate)
-                  0000cbda    0000000c     mrfi.obj (.text:MRFI_PostKillSem)
-                  0000cbe6    0000000c     mrfi.obj (.text:MRFI_Receive)
-                  0000cbf2    0000000c     timer.obj (.text:Timer0_Stop)
-                  0000cbfe    0000000c     chronic.obj (.text:chronic_tx_down)
-                  0000cc0a    0000000c     chronic.obj (.text:chronic_tx_up)
-                  0000cc16    0000000c     display.obj (.text:clear_display)
-                  0000cc22    0000000c     nwk_ping.obj (.text:handlePingRequest$32)
-                  0000cc2e    0000000c     main.obj (.text:idle_loop)
-                  0000cc3a    0000000c     rfsimpliciti.obj (.text:is_rf)
-                  0000cc46    0000000c     nwk.obj (.text:nwk_getNumObjectFromMsg)
-                  0000cc52    0000000c     nwk_globals.obj (.text:nwk_setAPAddress)
-                  0000cc5e    0000000c     display.obj (.text:switch_seg)
-                  0000cc6a    0000000c     menu.obj (.text:update_alarm)
-                  0000cc76    0000000c     menu.obj (.text:update_battery_voltage)
-                  0000cc82    0000000c     menu.obj (.text:update_stopwatch)
-                  0000cc8e    0000000a     ports.obj (.text:button_repeat_off)
-                  0000cc98    0000000a     nwk_mgmt.obj (.text:nwk_mgmtInit)
-                  0000cca2    0000000a     nwk_ping.obj (.text:nwk_pingInit)
-                  0000ccac    0000000a     buzzer.obj (.text:reset_buzzer)
-                  0000ccb6    0000000a     rfsimpliciti.obj (.text:reset_rf)
-                  0000ccc0    0000000a     main.obj (.text:to_lpm)
-                  0000ccca    0000000a     menu.obj (.text:update_date)
-                  0000ccd4    0000000a     menu.obj (.text:update_time)
-                  0000ccde    00000008     timer.obj (.text:Timer0_A3_Stop)
-                  0000cce6    00000008     timer.obj (.text:Timer0_Start)
-                  0000ccee    00000008     alarm.obj (.text:stop_alarm)
-                  0000ccf6    00000006     mrfi.obj (.text:MRFI_GetRadioState)
-                  0000ccfc    00000006     display.obj (.text:clear_blink_mem)
-                  0000cd02    00000006     nwk.obj (.text:nwk_freeConnection)
-                  0000cd08    00000006     nwk_globals.obj (.text:nwk_getBCastAddress)
-                  0000cd0e    00000006     display.obj (.text:start_blink)
-                  0000cd14    00000006     display.obj (.text:stop_blink)
-                  0000cd1a    00000004     rts430x.lib : pre_init.obj (.text:_system_pre_init)
-                  0000cd1e    00000004                 : exit.obj (.text:abort)
-                  0000cd22    00000004     nwk.obj (.text:nwk_NVObj)
-                  0000cd26    00000004     nwk_ioctl.obj (.text:nwk_connectionControl)
-                  0000cd2a    00000004     nwk_frame.obj (.text:nwk_getMyRxType)
-                  0000cd2e    00000004     nwk_globals.obj (.text:nwk_getProtocolVersion)
-                  0000cd32    00000004     nwk_freq.obj (.text:nwk_processFreq)
-                  0000cd36    00000004     nwk_security.obj (.text:nwk_processSecurity)
-                  0000cd3a    00000002     rts430x.lib : _lock.obj (.text:_nop)
-                  0000cd3c    00000002     user.obj (.text:dummy)
+.text      0    00008000    00004c3a     
+                  00008000    00000406     rfsimpliciti.obj (.text:simpliciti_sync_decode_ap_cmd_callback)
+                  00008406    00000212     user.obj (.text:set_value)
+                  00008618    000001e6     ports.obj (.text:_isr:PORT2_ISR)
+                  000087fe    000001e0     timer.obj (.text:_isr:TIMER0_A0_ISR)
+                  000089de    000001d4     clock.obj (.text:mx_time)
+                  00008bb2    000001a6     chronic.obj (.text:WriteRfSettings)
+                  00008d58    0000019a     mrfi.obj (.text:MRFI_Init)
+                  00008ef2    00000194     date.obj (.text:mx_date)
+                  00009086    0000015e     test.obj (.text:test_mode)
+                  000091e4    00000156     clock.obj (.text:display_time)
+                  0000933a    0000014a     nwk_link.obj (.text:smpl_send_link_reply$34)
+                  00009484    00000148     nwk_link.obj (.text:nwk_link)
+                  000095cc    00000130     rts430x.lib : fs_add.obj (.text)
+                  000096fc    00000126     main.obj (.text:wakeup_event)
+                  00009822    0000011c     stopwatch.obj (.text:display_stopwatch)
+                  0000993e    000000f8     chronic.obj (.text:chronic_tx)
+                  00009a36    000000f6     nwk_join.obj (.text:nwk_join)
+                  00009b2c    000000f4     mrfi.obj (.text:Mrfi_SyncPinRxIsr$25)
+                  00009c20    000000f2     main.obj (.text:display_update)
+                  00009d12    000000f2     alarm.obj (.text:mx_alarm)
+                  00009e04    000000ea     stopwatch.obj (.text:stopwatch_tick)
+                  00009eee    000000dc     nwk_QMgmt.obj (.text:nwk_QfindOldest)
+                  00009fca    000000d2     nwk.obj (.text:nwk_allocateLocalRxPort)
+                  0000a09c    000000ce     display.obj (.text:display_chars)
+                  0000a16a    000000cc     display.obj (.text:int_to_array)
+                  0000a236    000000c6     mrfi.obj (.text:MRFI_Transmit)
+                  0000a2fc    000000c0     main.obj (.text:init_application)
+                  0000a3bc    000000c0     rfsimpliciti.obj (.text:simpliciti_sync_get_data_callback)
+                  0000a47c    000000be     date.obj (.text:display_date)
+                  0000a53a    000000ba     chronic.obj (.text:do_tx)
+                  0000a5f4    000000b8     alarm.obj (.text:display_alarm)
+                  0000a6ac    000000b6     rts430x.lib : fs_mpy.obj (.text)
+                  0000a762    000000ae     main_ED_BM.obj (.text:simpliciti_link)
+                  0000a810    000000a8     nwk_api.obj (.text:SMPL_Ioctl)
+                  0000a8b8    000000a2     main_ED_BM.obj (.text:simpliciti_main_sync)
+                  0000a95a    0000009c     nwk_frame.obj (.text:nwk_retrieveFrame)
+                  0000a9f6    00000098     rf1a.obj (.text:Strobe)
+                  0000aa8e    0000008e     rts430x.lib : fs_div.obj (.text)
+                  0000ab1c    0000008c     nwk_frame.obj (.text:dispatchFrame$27)
+                  0000aba8    0000008c     nwk.obj (.text:nwk_isConnectionValid)
+                  0000ac34    0000008c     main.obj (.text:read_calibration_values)
+                  0000acc0    0000008c     rfsimpliciti.obj (.text:start_simpliciti_sync)
+                  0000ad4c    0000008a     nwk_frame.obj (.text:nwk_buildFrame)
+                  0000add6    00000086     chronic.obj (.text:config_doorbell)
+                  0000ae5c    00000082     date.obj (.text:get_numberOfDays)
+                  0000aede    00000082     nwk.obj (.text:nwk_nwkInit)
+                  0000af60    0000007c     nwk_frame.obj (.text:nwk_sendAckReply)
+                  0000afdc    0000007a     timer.obj (.text:_isr:TIMER0_A1_5_ISR)
+                  0000b056    00000076     nwk_QMgmt.obj (.text:nwk_QfindSlot)
+                  0000b0cc    00000074     mrfi.obj (.text:mrfiRadioInterfaceCmdStrobe)
+                  0000b140    00000072     display.obj (.text:display_char)
+                  0000b1b2    0000006e     battery.obj (.text:battery_measurement)
+                  0000b220    00000068     adc12.obj (.text:adc12_single_conversion)
+                  0000b288    00000068     nwk_link.obj (.text:smpl_send_unlink_reply$34)
+                  0000b2f0    00000066     nwk_api.obj (.text:SMPL_SendOpt)
+                  0000b356    00000062     mrfi.obj (.text:MRFI_RadioIsr)
+                  0000b3b8    00000062     timer.obj (.text:Timer0_A4_Delay)
+                  0000b41a    0000005e     chronic.obj (.text:WriteBurstPATable)
+                  0000b478    0000005e     main.obj (.text:init_global_variables)
+                  0000b4d6    0000005c     clock.obj (.text:clock_tick)
+                  0000b532    0000005c     battery.obj (.text:display_battery_V)
+                  0000b58e    0000005a     nwk_ioctl.obj (.text:nwk_radioControl)
+                  0000b5e8    00000058     rts430x.lib : div32u.obj (.text)
+                  0000b640    00000058     display.obj (.text:write_lcd_mem)
+                  0000b698    00000056     display.obj (.text:clear_line)
+                  0000b6ee    00000052     nwk_ioctl.obj (.text:nwk_rawSend)
+                  0000b740    0000004c     date.obj (.text:add_day)
+                  0000b78c    0000004c     ports.obj (.text:button_repeat_function)
+                  0000b7d8    0000004c     rts430x.lib : fs_toul.obj (.text)
+                  0000b824    0000004c     rfbsl.obj (.text:sx_rfbsl)
+                  0000b870    0000004a     rts430x.lib : fs_cmp.obj (.text)
+                  0000b8ba    0000004a     buzzer.obj (.text:toggle_buzzer)
+                  0000b904    00000048     nwk_api.obj (.text:SMPL_Receive)
+                  0000b94c    00000048     rts430x.lib : autoinit.obj (.text:_auto_init)
+                  0000b994    00000048     buzzer.obj (.text:start_buzzer)
+                  0000b9dc    00000046     pmm.obj (.text:SetVCoreUp)
+                  0000ba22    00000046     rf1a.obj (.text:WriteBurstReg)
+                  0000ba68    00000046     display.obj (.text:display_hours)
+                  0000baae    00000046     rts430x.lib : fs_tou.obj (.text)
+                  0000baf4    00000044     mrfi.obj (.text:mrfiRadioInterfaceReadReg)
+                  0000bb38    00000044     nwk_ping.obj (.text:smpl_send_ping_reply$32)
+                  0000bb7c    00000040     rts430x.lib : div32s.obj (.text)
+                  0000bbbc    0000003e     mrfi.obj (.text:Mrfi_RxAddrIsFiltered$25)
+                  0000bbfa    0000003e     rts430x.lib : lsl32.obj (.text:l_lsl_const)
+                  0000bc38    0000003c     nwk.obj (.text:nwk_findPeer)
+                  0000bc74    0000003c     nwk.obj (.text:nwk_getNextConnection)
+                  0000bcb0    0000003c     nwk.obj (.text:nwk_isLinkDuplicate)
+                  0000bcec    0000003c     stopwatch.obj (.text:update_stopwatch_timer)
+                  0000bd28    0000003a     rf1a.obj (.text:WriteSingleReg)
+                  0000bd62    00000038     mrfi.obj (.text:MRFI_ReplyDelay)
+                  0000bd9a    00000038     nwk.obj (.text:initializeConnection$30)
+                  0000bdd2    00000038     main.obj (.text:main)
+                  0000be0a    00000036     mrfi.obj (.text:mrfiRadioInterfaceWriteReg)
+                  0000be40    00000036     mrfi.obj (.text:mrfiRadioInterfaceWriteTxFifo)
+                  0000be76    00000036     nwk_mgmt.obj (.text:nwk_processMgmt)
+                  0000beac    00000036     rts430x.lib : fs_itof.obj (.text)
+                  0000bee2    00000032     mrfi.obj (.text:mrfiRadioInterfaceReadRxFifo)
+                  0000bf14    00000032     radio.obj (.text:radio_reset)
+                  0000bf46    00000032     rts430x.lib : fs_ultof.obj (.text)
+                  0000bf78    00000032     alarm.obj (.text:sx_alarm)
+                  0000bfaa    00000030     nwk.obj (.text:nwk_isValidReply)
+                  0000bfda    00000030     nwk_link.obj (.text:nwk_linkInit)
+                  0000c00a    00000030     nwk_ioctl.obj (.text:nwk_rawReceive)
+                  0000c03a    00000030     nwk_frame.obj (.text:nwk_sendFrame)
+                  0000c06a    0000002e     nwk_QMgmt.obj (.text:nwk_QadjustOrder)
+                  0000c098    0000002c     mrfi.obj (.text:Mrfi_RxModeOff$25)
+                  0000c0c4    0000002c     nwk_api.obj (.text:SMPL_Init)
+                  0000c0f0    0000002c     rts430x.lib : div16s.obj (.text)
+                  0000c11c    0000002a     mrfi.obj (.text:Mrfi_CalculateRssi$25)
+                  0000c146    0000002a     timer.obj (.text:Timer0_A3_Start)
+                  0000c170    0000002a     rts430x.lib : boot.obj (.text:_isr:_c_int00_noexit)
+                  0000c19a    0000002a     display.obj (.text:lcd_init)
+                  0000c1c4    00000028     chronic.obj (.text:display_doorbell)
+                  0000c1ec    00000028     nwk.obj (.text:map_lid2idx$30)
+                  0000c214    00000028     nwk.obj (.text:nwk_getConnInfo)
+                  0000c23c    00000028     nwk_join.obj (.text:nwk_joinInit)
+                  0000c264    00000026     mrfi.obj (.text:MRFI_Sleep)
+                  0000c28a    00000026     pmm.obj (.text:SetVCore)
+                  0000c2b0    00000026     pmm.obj (.text:SetVCoreDown)
+                  0000c2d6    00000026     rfbsl.obj (.text:display_rfbsl)
+                  0000c2fc    00000026     nwk_link.obj (.text:handleLinkRequest$34)
+                  0000c322    00000026     ports.obj (.text:init_buttons)
+                  0000c348    00000026     nwk.obj (.text:nwk_checkConnInfo)
+                  0000c36e    00000026     nwk_globals.obj (.text:nwk_globalsInit)
+                  0000c394    00000024     mrfi.obj (.text:MRFI_SetRxAddrFilter)
+                  0000c3b8    00000024     nwk_ping.obj (.text:nwk_processPing)
+                  0000c3dc    00000024     rts430x.lib : fs_utof.obj (.text)
+                  0000c400    00000022     bsp.obj (.text:BSP_Delay)
+                  0000c422    00000022     mrfi.obj (.text:MRFI_WakeUp)
+                  0000c444    00000022     display.obj (.text:display_value)
+                  0000c466    00000022     rts430x.lib : memcmp.obj (.text:memcmp)
+                  0000c488    00000022     nwk_link.obj (.text:nwk_processLink)
+                  0000c4aa    00000022     main.obj (.text:process_requests)
+                  0000c4cc    00000022     rts430x.lib : mult32_f5hw.obj (.text)
+                  0000c4ee    00000022     stopwatch.obj (.text:start_stopwatch)
+                  0000c510    00000020     mrfi.obj (.text:MRFI_EnableRxAddrFilter)
+                  0000c530    00000020     nwk_frame.obj (.text:MRFI_RxCompleteISR)
+                  0000c550    00000020     mrfi.obj (.text:MRFI_RxIdle)
+                  0000c570    00000020     mrfi.obj (.text:MRFI_RxOn)
+                  0000c590    00000020     mrfi.obj (.text:Mrfi_DelayUsecSem$25)
+                  0000c5b0    00000020     radio.obj (.text:_isr:radio_ISR)
+                  0000c5d0    00000020     nwk_frame.obj (.text:nwk_frameInit)
+                  0000c5f0    00000020     clock.obj (.text:reset_clock)
+                  0000c610    00000020     stopwatch.obj (.text:reset_stopwatch)
+                  0000c630    00000020     buzzer.obj (.text:stop_buzzer)
+                  0000c650    0000001e     mrfi.obj (.text:MRFI_SetLogicalChannel)
+                  0000c66e    0000001e     display.obj (.text:display_symbol)
+                  0000c68c    0000001e     rts430x.lib : memmov.obj (.text:memmove)
+                  0000c6aa    0000001e     nwk_globals.obj (.text:nwk_setMyAddress)
+                  0000c6c8    0000001e     rfsimpliciti.obj (.text:sx_sync)
+                  0000c6e6    0000001c     mrfi.obj (.text:MRFI_SetRFPwr)
+                  0000c702    0000001c     mrfi.obj (.text:Mrfi_DelayUsec$25)
+                  0000c71e    0000001c     alarm.obj (.text:check_alarm)
+                  0000c73a    0000001c     display.obj (.text:clear_display_all)
+                  0000c756    0000001c     display.obj (.text:display_am_pm_symbol)
+                  0000c772    0000001c     nwk_QMgmt.obj (.text:nwk_QInit)
+                  0000c78e    0000001c     nwk.obj (.text:nwk_putNumObjectIntoMsg)
+                  0000c7aa    0000001a     mrfi.obj (.text:Mrfi_RandomBackoffDelay$25)
+                  0000c7c4    0000001a     rts430x.lib : mult1632_f5hw.obj (.text:__mpyul)
+                  0000c7de    0000001a     adc12.obj (.text:_isr:ADC12ISR)
+                  0000c7f8    0000001a     nwk_ioctl.obj (.text:nwk_deviceAddress)
+                  0000c812    0000001a     stopwatch.obj (.text:stop_stopwatch)
+                  0000c82c    00000018     rf1a.obj (.text:ReadSingleReg)
+                  0000c844    00000018     chronic.obj (.text:chronic_config_rf)
+                  0000c85c    00000018     clock.obj (.text:convert_hour_to_12H_format)
+                  0000c874    00000018     test.obj (.text:display_all_on)
+                  0000c88c    00000018     nwk_join.obj (.text:nwk_processJoin)
+                  0000c8a4    00000018     alarm.obj (.text:reset_alarm)
+                  0000c8bc    00000016     mrfi.obj (.text:MRFI_RandomByte)
+                  0000c8d2    00000016     mrfi.obj (.text:Mrfi_RxModeOn$25)
+                  0000c8e8    00000016     ports.obj (.text:button_repeat_on)
+                  0000c8fe    00000016     clock.obj (.text:display_selection_Timeformat1)
+                  0000c914    00000016     rts430x.lib : div16u.obj (.text)
+                  0000c92a    00000016                 : mult16_f5hw.obj (.text)
+                  0000c940    00000016     stopwatch.obj (.text:sx_stopwatch)
+                  0000c956    00000014     timer.obj (.text:Timer0_Init)
+                  0000c96a    00000014     buzzer.obj (.text:countdown_buzzer)
+                  0000c97e    00000014     test.obj (.text:display_all_off)
+                  0000c992    00000014     rfsimpliciti.obj (.text:display_sync)
+                  0000c9a6    00000014     nwk_api.obj (.text:ioctlPreInitAccessIsOK$28)
+                  0000c9ba    00000014     stopwatch.obj (.text:is_stopwatch)
+                  0000c9ce    00000014     date.obj (.text:reset_date)
+                  0000c9e2    00000012     rts430x.lib : memcpy.obj (.text:memcpy)
+                  0000c9f4    00000012                 : memset.obj (.text:memset)
+                  0000ca06    00000012     nwk_globals.obj (.text:nwk_getMyAddress)
+                  0000ca18    00000012     nwk_join.obj (.text:nwk_setJoinToken)
+                  0000ca2a    00000012     nwk_link.obj (.text:nwk_setLinkToken)
+                  0000ca3c    00000012     radio.obj (.text:open_radio)
+                  0000ca4e    00000012     battery.obj (.text:reset_batt_measurement)
+                  0000ca60    00000010     bsp.obj (.text:BSP_InitBoard)
+                  0000ca70    00000010     mrfi.obj (.text:MRFI_DelayMs)
+                  0000ca80    00000010     rf1a.obj (.text:ResetRadioCore)
+                  0000ca90    00000010     radio.obj (.text:close_radio)
+                  0000caa0    00000010     radio.obj (.text:radio_powerdown)
+                  0000cab0    0000000e     clock.obj (.text:is_hour_am)
+                  0000cabe    0000000e     stopwatch.obj (.text:mx_stopwatch)
+                  0000cacc    0000000e     display.obj (.text:set_blink_rate)
+                  0000cada    0000000c     mrfi.obj (.text:MRFI_PostKillSem)
+                  0000cae6    0000000c     mrfi.obj (.text:MRFI_Receive)
+                  0000caf2    0000000c     timer.obj (.text:Timer0_Stop)
+                  0000cafe    0000000c     chronic.obj (.text:chronic_tx_down)
+                  0000cb0a    0000000c     chronic.obj (.text:chronic_tx_up)
+                  0000cb16    0000000c     display.obj (.text:clear_display)
+                  0000cb22    0000000c     nwk_ping.obj (.text:handlePingRequest$32)
+                  0000cb2e    0000000c     main.obj (.text:idle_loop)
+                  0000cb3a    0000000c     rfsimpliciti.obj (.text:is_rf)
+                  0000cb46    0000000c     nwk.obj (.text:nwk_getNumObjectFromMsg)
+                  0000cb52    0000000c     nwk_globals.obj (.text:nwk_setAPAddress)
+                  0000cb5e    0000000c     menu.obj (.text:update_alarm)
+                  0000cb6a    0000000c     menu.obj (.text:update_battery_voltage)
+                  0000cb76    0000000c     menu.obj (.text:update_stopwatch)
+                  0000cb82    0000000a     ports.obj (.text:button_repeat_off)
+                  0000cb8c    0000000a     nwk_mgmt.obj (.text:nwk_mgmtInit)
+                  0000cb96    0000000a     nwk_ping.obj (.text:nwk_pingInit)
+                  0000cba0    0000000a     buzzer.obj (.text:reset_buzzer)
+                  0000cbaa    0000000a     rfsimpliciti.obj (.text:reset_rf)
+                  0000cbb4    0000000a     display.obj (.text:switch_seg)
+                  0000cbbe    0000000a     menu.obj (.text:update_date)
+                  0000cbc8    0000000a     menu.obj (.text:update_time)
+                  0000cbd2    00000008     timer.obj (.text:Timer0_A3_Stop)
+                  0000cbda    00000008     timer.obj (.text:Timer0_Start)
+                  0000cbe2    00000008     alarm.obj (.text:stop_alarm)
+                  0000cbea    00000008     main.obj (.text:to_lpm)
+                  0000cbf2    00000006     mrfi.obj (.text:MRFI_GetRadioState)
+                  0000cbf8    00000006     display.obj (.text:clear_blink_mem)
+                  0000cbfe    00000006     nwk.obj (.text:nwk_freeConnection)
+                  0000cc04    00000006     nwk_globals.obj (.text:nwk_getBCastAddress)
+                  0000cc0a    00000006     display.obj (.text:start_blink)
+                  0000cc10    00000006     display.obj (.text:stop_blink)
+                  0000cc16    00000004     rts430x.lib : pre_init.obj (.text:_system_pre_init)
+                  0000cc1a    00000004                 : exit.obj (.text:abort)
+                  0000cc1e    00000004     nwk.obj (.text:nwk_NVObj)
+                  0000cc22    00000004     nwk_ioctl.obj (.text:nwk_connectionControl)
+                  0000cc26    00000004     nwk_frame.obj (.text:nwk_getMyRxType)
+                  0000cc2a    00000004     nwk_globals.obj (.text:nwk_getProtocolVersion)
+                  0000cc2e    00000004     nwk_freq.obj (.text:nwk_processFreq)
+                  0000cc32    00000004     nwk_security.obj (.text:nwk_processSecurity)
+                  0000cc36    00000002     rts430x.lib : _lock.obj (.text:_nop)
+                  0000cc38    00000002     user.obj (.text:dummy)
 
-.const     0    0000cd3e    00000403     
-                  0000cd3e    0000021f     display.obj (.const:int_to_array_conversion_table)
-                  0000cf5d    00000001     --HOLE-- [fill = 0]
-                  0000cf5e    00000090     menu.obj (.const)
-                  0000cfee    00000080     <whole-program> (.const:.string)
-                  0000d06e    00000040     mrfi.obj (.const:mrfiRadioCfg)
-                  0000d0ae    0000002b     display.obj (.const:.string:lcd_font)
-                  0000d0d9    00000001     --HOLE-- [fill = 0]
-                  0000d0da    0000002a     display.obj (.const:.string:segments_bitmask)
-                  0000d104    00000018     nwk_frame.obj (.const:func$27)
-                  0000d11c    00000009     nwk_globals.obj (.const)
-                  0000d125    00000001     --HOLE-- [fill = 0]
-                  0000d126    00000008     clock.obj (.const:selection_Timeformat)
-                  0000d12e    00000004     mrfi.obj (.const:.string:mrfiBroadcastAddr)
-                  0000d132    00000004     mrfi.obj (.const:.string:mrfiLogicalChanTable$25)
-                  0000d136    00000004     BlueRobin_RX_868MHz.lib : BRRX_Resource.obj (.const)
-                  0000d13a    00000003     mrfi.obj (.const:.string:mrfiRFPowerTable$25)
-                  0000d13d    00000001     --HOLE-- [fill = 0]
-                  0000d13e    00000001     mrfi.obj (.const)
-                  0000d13f    00000001     --HOLE-- [fill = 0]
-                  0000d140    00000001     nwk_frame.obj (.const)
+.const     0    0000cc3a    000003ff     
+                  0000cc3a    0000021f     display.obj (.const:int_to_array_conversion_table)
+                  0000ce59    00000001     mrfi.obj (.const)
+                  0000ce5a    00000090     menu.obj (.const)
+                  0000ceea    00000080     <whole-program> (.const:.string)
+                  0000cf6a    00000040     mrfi.obj (.const:mrfiRadioCfg)
+                  0000cfaa    0000002b     display.obj (.const:.string:lcd_font)
+                  0000cfd5    00000001     nwk_frame.obj (.const)
+                  0000cfd6    0000002a     display.obj (.const:.string:segments_bitmask)
+                  0000d000    00000018     nwk_frame.obj (.const:func$27)
+                  0000d018    00000009     nwk_globals.obj (.const)
+                  0000d021    00000001     --HOLE-- [fill = 0]
+                  0000d022    00000008     clock.obj (.const:selection_Timeformat)
+                  0000d02a    00000004     mrfi.obj (.const:.string:mrfiBroadcastAddr)
+                  0000d02e    00000004     mrfi.obj (.const:.string:mrfiLogicalChanTable$25)
+                  0000d032    00000004     BlueRobin_RX_868MHz.lib : BRRX_Resource.obj (.const)
+                  0000d036    00000003     mrfi.obj (.const:.string:mrfiRFPowerTable$25)
 
-.cinit     0    0000d142    000001fa     
-                  0000d142    000001af     <whole-program> (.cinit)
-                  0000d2f1    00000001     --HOLE-- [fill = 0]
-                  0000d2f2    00000017     BlueRobin_RX_868MHz.lib : BRRX_Scheduler.obj (.cinit)
-                  0000d309    00000001     --HOLE-- [fill = 0]
-                  0000d30a    00000017                             : BRRX_Timer.obj (.cinit)
-                  0000d321    00000001     --HOLE-- [fill = 0]
-                  0000d322    0000000c                             : BRRX_Radio.obj (.cinit)
-                  0000d32e    0000000b                             : BRRX_Packet.obj (.cinit)
-                  0000d339    00000001     --HOLE-- [fill = 0]
-                  0000d33a    00000002     (.pad.cinit) [fill = 0]
+.cinit     0    0000d03a    000001fa     
+                  0000d03a    000001af     <whole-program> (.cinit)
+                  0000d1e9    00000001     --HOLE-- [fill = 0]
+                  0000d1ea    00000017     BlueRobin_RX_868MHz.lib : BRRX_Scheduler.obj (.cinit)
+                  0000d201    00000001     --HOLE-- [fill = 0]
+                  0000d202    00000017                             : BRRX_Timer.obj (.cinit)
+                  0000d219    00000001     --HOLE-- [fill = 0]
+                  0000d21a    0000000c                             : BRRX_Radio.obj (.cinit)
+                  0000d226    0000000b                             : BRRX_Packet.obj (.cinit)
+                  0000d231    00000001     --HOLE-- [fill = 0]
+                  0000d232    00000002     (.pad.cinit) [fill = 0]
 
 .int48     0    0000ffe0    00000002     
                   0000ffe0    00000002     <whole-program> (.int48)
@@ -458,7 +454,7 @@ address    name
 0000070a   ADC12IFG
 0000070b   ADC12IFG_H
 0000070a   ADC12IFG_L
-0000c8fa   ADC12ISR
+0000c7de   ADC12ISR
 0000070e   ADC12IV
 0000070f   ADC12IV_H
 0000070e   ADC12IV_L
@@ -543,8 +539,8 @@ address    name
 000009c4   AESASTAT_L
 000020b0   BRRX__CurrentPacketTime_u16
 000020b2   BRRX__CurrentSignalLevel_u8
-0000d136   BRRX__First_TXCB_t
-0000d138   BRRX__Last_TXCB_t
+0000d032   BRRX__First_TXCB_t
+0000d034   BRRX__Last_TXCB_t
 00002022   BRRX__MaxSearchTries_u8
 0000206e   BRRX__NextEndTime_u16
 0000206c   BRRX__NextEventTime_u16
@@ -558,13 +554,13 @@ address    name
 00001faa   BRRX__TXCB_t
 00002024   BRRX__TestMode_u8
 00002072   BRRX__TimerState_t
-0000c524   BSP_Delay
-0000cb60   BSP_InitBoard
+0000c400   BSP_Delay
+0000ca60   BSP_InitBoard
 00001d83   Button_Delay
 00001cc2   Button_Down_Data
 00001d84   Button_Repeat
 00001c00   Button_Up_Data
-0000cd1e   C$$EXIT
+0000cc1a   C$$EXIT
 000008c0   CBCTL0
 000008c1   CBCTL0_H
 000008c0   CBCTL0_L
@@ -727,21 +723,21 @@ address    name
 00000a26   LCDM7
 00000a27   LCDM8
 00000a28   LCDM9
-0000bd32   L_LSL_1
-0000bd0e   L_LSL_10
-0000bd0a   L_LSL_11
-0000bd06   L_LSL_12
-0000bd02   L_LSL_13
-0000bcfe   L_LSL_14
-0000bcfa   L_LSL_15
-0000bd2e   L_LSL_2
-0000bd2a   L_LSL_3
-0000bd26   L_LSL_4
-0000bd22   L_LSL_5
-0000bd1e   L_LSL_6
-0000bd1a   L_LSL_7
-0000bd16   L_LSL_8
-0000bd12   L_LSL_9
+0000bc32   L_LSL_1
+0000bc0e   L_LSL_10
+0000bc0a   L_LSL_11
+0000bc06   L_LSL_12
+0000bc02   L_LSL_13
+0000bbfe   L_LSL_14
+0000bbfa   L_LSL_15
+0000bc2e   L_LSL_2
+0000bc2a   L_LSL_3
+0000bc26   L_LSL_4
+0000bc22   L_LSL_5
+0000bc1e   L_LSL_6
+0000bc1a   L_LSL_7
+0000bc16   L_LSL_8
+0000bc12   L_LSL_9
 000004c4   MAC
 000004da   MAC32H
 000004db   MAC32H_H
@@ -781,24 +777,24 @@ address    name
 000004c2   MPYS_L
 000004c1   MPY_H
 000004c0   MPY_L
-0000cb70   MRFI_DelayMs
-0000c612   MRFI_EnableRxAddrFilter
-0000ccf6   MRFI_GetRadioState
-00008f68   MRFI_Init
-0000cbda   MRFI_PostKillSem
-0000b450   MRFI_RadioIsr
-0000c9a6   MRFI_RandomByte
-0000cbe6   MRFI_Receive
-0000bf3c   MRFI_ReplyDelay
-0000c632   MRFI_RxCompleteISR
-0000c652   MRFI_RxIdle
-0000c672   MRFI_RxOn
-0000c732   MRFI_SetLogicalChannel
-0000c804   MRFI_SetRFPwr
-0000c470   MRFI_SetRxAddrFilter
-0000c494   MRFI_Sleep
-0000a30c   MRFI_Transmit
-0000c546   MRFI_WakeUp
+0000ca70   MRFI_DelayMs
+0000c510   MRFI_EnableRxAddrFilter
+0000cbf2   MRFI_GetRadioState
+00008d58   MRFI_Init
+0000cada   MRFI_PostKillSem
+0000b356   MRFI_RadioIsr
+0000c8bc   MRFI_RandomByte
+0000cae6   MRFI_Receive
+0000bd62   MRFI_ReplyDelay
+0000c530   MRFI_RxCompleteISR
+0000c550   MRFI_RxIdle
+0000c570   MRFI_RxOn
+0000c650   MRFI_SetLogicalChannel
+0000c6e6   MRFI_SetRFPwr
+0000c394   MRFI_SetRxAddrFilter
+0000c264   MRFI_Sleep
+0000a236   MRFI_Transmit
+0000c422   MRFI_WakeUp
 000004c8   OP2
 000004e2   OP2H
 000004e3   OP2H_H
@@ -942,7 +938,7 @@ address    name
 0000012e   PMMRIE
 0000012f   PMMRIE_H
 0000012e   PMMRIE_L
-00008828   PORT2_ISR
+00008618   PORT2_ISR
 00000158   RCCTL0
 00000159   RCCTL0_H
 00000158   RCCTL0_L
@@ -1070,8 +1066,8 @@ address    name
 000004b6   RTCYEAR
 000004b7   RTCYEAR_H
 000004b6   RTCYEAR_L
-0000c9d2   ReadSingleReg
-0000cb80   ResetRadioCore
+0000c82c   ReadSingleReg
+0000ca80   ResetRadioCore
 00000100   SFRIE1
 00000101   SFRIE1_H
 00000100   SFRIE1_L
@@ -1081,11 +1077,11 @@ address    name
 00000104   SFRRPCR
 00000105   SFRRPCR_H
 00000104   SFRRPCR_L
-0000c1e8   SMPL_Init
-0000a8fe   SMPL_Ioctl
-000093c8   SMPL_Link
-0000ba06   SMPL_Receive
-0000b3ea   SMPL_SendOpt
+0000c0c4   SMPL_Init
+0000a810   SMPL_Ioctl
+00009484   SMPL_Link
+0000b904   SMPL_Receive
+0000b2f0   SMPL_SendOpt
 000004ce   SUMEXT
 000004cf   SUMEXT_H
 000004ce   SUMEXT_L
@@ -1131,10 +1127,10 @@ address    name
 0000019a   SYSUNIV
 0000019b   SYSUNIV_H
 0000019a   SYSUNIV_L
-0000c38c   SetVCore
-0000c3b2   SetVCoreDown
-0000ba96   SetVCoreUp
-0000aaee   Strobe
+0000c28a   SetVCore
+0000c2b0   SetVCoreDown
+0000b9dc   SetVCoreUp
+0000a9f6   Strobe
 00000352   TA0CCR0
 00000354   TA0CCR1
 00000356   TA0CCR2
@@ -1159,14 +1155,14 @@ address    name
 000003a0   TA1EX0
 000003ae   TA1IV
 00000390   TA1R
-00008bec   TIMER0_A0_ISR
-0000b0d2   TIMER0_A1_5_ISR
-0000c26c   Timer0_A3_Start
-0000ccde   Timer0_A3_Stop
-0000b4b2   Timer0_A4_Delay
-0000ca56   Timer0_Init
-0000cce6   Timer0_Start
-0000cbf2   Timer0_Stop
+000087fe   TIMER0_A0_ISR
+0000afdc   TIMER0_A1_5_ISR
+0000c146   Timer0_A3_Start
+0000cbd2   Timer0_A3_Stop
+0000b3b8   Timer0_A4_Delay
+0000c956   Timer0_Init
+0000cbda   Timer0_Start
+0000caf2   Timer0_Stop
 000005d0   UCA0ABCTL
 000005c6   UCA0BRW
 000005c7   UCA0BRW_H
@@ -1235,62 +1231,67 @@ address    name
 0000015c   WDTCTL
 0000015d   WDTCTL_H
 0000015c   WDTCTL_L
-0000b62c   WriteBurstPATable
-0000bbf4   WriteBurstReg
-00008dc2   WriteRfSettings
-0000be28   WriteSingleReg
+0000b41a   WriteBurstPATable
+0000ba22   WriteBurstReg
+00008bb2   WriteRfSettings
+0000bd28   WriteSingleReg
 00002bfc   __STACK_END
 00000050   __STACK_SIZE
 00000001   __TI_args_main
 00000001   __TI_auto_init
+0000208c   __TI_cleanup_ptr
+00002090   __TI_dtors_ptr
 00000001   __TI_exit
+0000ffe0   __TI_int48
+0000ffea   __TI_int53
+0000ffec   __TI_int54
+0000ffee   __TI_int55
+0000fff0   __TI_int56
 ffffffff   __binit__
 00001c00   __bss__
 ffffffff   __c_args__
-0000d142   __cinit__
-0000c240   __divi
-0000bc7c   __divli
-0000ca14   __divu
-0000b798   __divul
+0000d03a   __cinit__
+0000c0f0   __divi
+0000bb7c   __divli
+0000c914   __divu
+0000b5e8   __divul
 000020c7   __end__
-0000cd3e   __etext__
-00009668   __fs_add
-0000b972   __fs_cmp
-0000ab84   __fs_div
-0000bf06   __fs_itof
-0000a794   __fs_mpy
-00009662   __fs_sub
-0000bbae   __fs_tou
-0000b8da   __fs_toul
-0000c00a   __fs_ultof
-0000c500   __fs_utof
-0000ca2a   __mpyi_f5hw
-0000c5ce   __mpyl_f5hw
-0000c8e0   __mpyul_f5hw
+0000cc3a   __etext__
+000095d2   __fs_add
+0000b870   __fs_cmp
+0000aa8e   __fs_div
+0000beac   __fs_itof
+0000a6ac   __fs_mpy
+000095cc   __fs_sub
+0000baae   __fs_tou
+0000b7d8   __fs_toul
+0000bf46   __fs_ultof
+0000c3dc   __fs_utof
+0000c92a   __mpyi_f5hw
+0000c4cc   __mpyl_f5hw
+0000c7c4   __mpyul_f5hw
 ffffffff   __pinit__
-0000c240   __remi
-0000bc7c   __remli
-0000ca14   __remu
-0000b798   __remul
+0000c0f0   __remi
+0000bb7c   __remli
+0000c914   __remu
+0000b5e8   __remul
 00008000   __text__
-0000badc   _auto_init
-0000c296   _c_int00
-0000c296   _c_int00_noexit
-0000208c   _cleanup_ptr
-00002090   _dtors_ptr
+0000b94c   _auto_init
+0000c170   _c_int00
+0000c170   _c_int00_noexit
 00002084   _lock
-0000cd3a   _nop
+0000cc36   _nop
 0000fffe   _reset_vector
 00002bac   _stack
-0000cd1a   _system_pre_init
+0000cc16   _system_pre_init
 00002088   _unlock
-0000cd1e   abort
+0000cc1a   abort
 000020c2   adc12_data_ready
 000020c0   adc12_result
-0000b31a   adc12_single_conversion
-0000b842   add_day
+0000b220   adc12_single_conversion
+0000b740   add_day
 0000206b   as_ok
-0000b1c2   battery_measurement
+0000b1b2   battery_measurement
 ffffffff   binit
 000020a0   brrx_packet_end_cap_value
 00001ef4   burst_end
@@ -1299,156 +1300,156 @@ ffffffff   binit
 00001f08   burst_packet_index
 00001ef2   burst_start
 0000204e   button
-0000b88e   button_repeat_function
-0000cc8e   button_repeat_off
-0000c9e8   button_repeat_on
-0000c820   check_alarm
-0000c92e   chronic_config_rf
-00009af8   chronic_tx
-0000cbfe   chronic_tx_down
-0000cc0a   chronic_tx_up
-0000d142   cinit
-0000ccfc   clear_blink_mem
-0000cc16   clear_display
-0000c83c   clear_display_all
-0000b6e4   clear_line
-0000b688   clock_tick
-0000cb90   close_radio
-0000aecc   config_doorbell
-0000c946   convert_hour_to_12H_format
-0000ca6a   countdown_buzzer
+0000b78c   button_repeat_function
+0000cb82   button_repeat_off
+0000c8e8   button_repeat_on
+0000c71e   check_alarm
+0000c844   chronic_config_rf
+0000993e   chronic_tx
+0000cafe   chronic_tx_down
+0000cb0a   chronic_tx_up
+0000d03a   cinit
+0000cbf8   clear_blink_mem
+0000cb16   clear_display
+0000c73a   clear_display_all
+0000b698   clear_line
+0000b4d6   clock_tick
+0000ca90   close_radio
+0000add6   config_doorbell
+0000c85c   convert_hour_to_12H_format
+0000c96a   countdown_buzzer
 00001e64   display
-0000a3d2   display_alarm
-0000ca7e   display_all_off
-0000c95e   display_all_on
-0000c76e   display_am_pm_symbol
-0000b512   display_battery_V
-0000b236   display_char
+0000a5f4   display_alarm
+0000c97e   display_all_off
+0000c874   display_all_on
+0000c756   display_am_pm_symbol
+0000b532   display_battery_V
+0000b140   display_char
 0000a09c   display_chars
-0000a242   display_date
-0000c06e   display_doorbell
-0000bb22   display_hours
-0000c2c0   display_rfbsl
-0000c9fe   display_selection_Timeformat1
-000098bc   display_stopwatch
-0000c78c   display_symbol
-0000ca92   display_sync
-00009268   display_time
-000099e2   display_update
-0000c568   display_value
-0000a6da   do_tx
-0000cd3c   dummy
+0000a47c   display_date
+0000c1c4   display_doorbell
+0000ba68   display_hours
+0000c2d6   display_rfbsl
+0000c8fe   display_selection_Timeformat1
+00009822   display_stopwatch
+0000c66e   display_symbol
+0000c992   display_sync
+000091e4   display_time
+00009c20   display_update
+0000c444   display_value
+0000a53a   do_tx
+0000cc38   dummy
 000020c7   end
-0000cd3e   etext
+0000cc3a   etext
 00002094   fptr_Timer0_A3_function
 00001fe6   fptr_lcd_function_line1
 00001fea   fptr_lcd_function_line2
-0000af52   get_numberOfDays
-0000cc2e   idle_loop
-0000a55a   init_application
-0000c3fe   init_buttons
-0000b570   init_global_variables
-0000a496   int_to_array
-0000cd3e   int_to_array_conversion_table
+0000ae5c   get_numberOfDays
+0000cb2e   idle_loop
+0000a2fc   init_application
+0000c322   init_buttons
+0000b478   init_global_variables
+0000a16a   int_to_array
+0000cc3a   int_to_array_conversion_table
 00001eba   int_to_array_str
-0000cbb0   is_hour_am
-0000cc3a   is_rf
-0000caba   is_stopwatch
-0000d0ae   lcd_font
-0000c2ea   lcd_init
-0000be98   main
-0000c4b8   memcmp
-0000cae2   memcpy
-0000c7aa   memmove
-0000caf4   memset
-0000cf82   menu_L1_Alarm
-0000cf94   menu_L1_Doorbell
-0000cf70   menu_L1_Time
-0000cfb8   menu_L2_Battery
-0000cfa6   menu_L2_Date
-0000cfdc   menu_L2_RFBSL
-0000cf5e   menu_L2_Stopwatch
-0000cfca   menu_L2_Sync
+0000cab0   is_hour_am
+0000cb3a   is_rf
+0000c9ba   is_stopwatch
+0000cfaa   lcd_font
+0000c19a   lcd_init
+0000bdd2   main
+0000c466   memcmp
+0000c9e2   memcpy
+0000c68c   memmove
+0000c9f4   memset
+0000ce7e   menu_L1_Alarm
+0000ce90   menu_L1_Doorbell
+0000ce6c   menu_L1_Time
+0000ceb4   menu_L2_Battery
+0000cea2   menu_L2_Date
+0000ced8   menu_L2_RFBSL
+0000ce5a   menu_L2_Stopwatch
+0000cec6   menu_L2_Sync
 00001fe4   message
-0000d13e   method
-0000d12e   mrfiBroadcastAddr
-0000d06e   mrfiRadioCfg
-0000b2a8   mrfiRadioInterfaceCmdStrobe
-0000bb68   mrfiRadioInterfaceReadReg
-0000c09e   mrfiRadioInterfaceReadRxFifo
-0000bf70   mrfiRadioInterfaceWriteReg
-0000bfa4   mrfiRadioInterfaceWriteTxFifo
-00009bf0   mx_alarm
-00008a0e   mx_date
-0000cbbe   mx_stopwatch
-00008634   mx_time
-0000cd22   nwk_NVObj
-0000c858   nwk_QInit
-0000c214   nwk_QadjustOrder
-00009fc0   nwk_QfindOldest
-0000b14c   nwk_QfindSlot
-0000a170   nwk_allocateLocalRxPort
-0000ae42   nwk_buildFrame
-0000c424   nwk_checkConnInfo
-0000cd26   nwk_connectionControl
-0000c874   nwk_deviceAddress
-0000bd38   nwk_findPeer
-0000c6b2   nwk_frameInit
-0000cd02   nwk_freeConnection
-0000cd08   nwk_getBCastAddress
-0000c33c   nwk_getConnInfo
-0000cb06   nwk_getMyAddress
-0000cd2a   nwk_getMyRxType
-0000bd74   nwk_getNextConnection
-0000cc46   nwk_getNumObjectFromMsg
-0000cd2e   nwk_getProtocolVersion
-0000c44a   nwk_globalsInit
-0000ac9e   nwk_isConnectionValid
-0000bdb0   nwk_isLinkDuplicate
-0000c0ce   nwk_isValidReply
-00009ce8   nwk_join
-0000c364   nwk_joinInit
-000093c8   nwk_link
-0000c0fe   nwk_linkInit
-0000cc98   nwk_mgmtInit
-0000afd4   nwk_nwkInit
-0000cca2   nwk_pingInit
-0000cd32   nwk_processFreq
-0000c976   nwk_processJoin
-0000c58a   nwk_processLink
-0000bed0   nwk_processMgmt
-0000c4dc   nwk_processPing
-0000cd36   nwk_processSecurity
-0000c890   nwk_putNumObjectIntoMsg
-0000b73e   nwk_radioControl
-0000c12e   nwk_rawReceive
-0000b7f0   nwk_rawSend
-0000aa52   nwk_retrieveFrame
-0000b056   nwk_sendAckReply
-0000c15e   nwk_sendFrame
-0000cc52   nwk_setAPAddress
-0000cb18   nwk_setJoinToken
-0000cb2a   nwk_setLinkToken
-0000c7c8   nwk_setMyAddress
-0000cb3c   open_radio
+0000ce59   method
+0000d02a   mrfiBroadcastAddr
+0000cf6a   mrfiRadioCfg
+0000b0cc   mrfiRadioInterfaceCmdStrobe
+0000baf4   mrfiRadioInterfaceReadReg
+0000bee2   mrfiRadioInterfaceReadRxFifo
+0000be0a   mrfiRadioInterfaceWriteReg
+0000be40   mrfiRadioInterfaceWriteTxFifo
+00009d12   mx_alarm
+00008ef2   mx_date
+0000cabe   mx_stopwatch
+000089de   mx_time
+0000cc1e   nwk_NVObj
+0000c772   nwk_QInit
+0000c06a   nwk_QadjustOrder
+00009eee   nwk_QfindOldest
+0000b056   nwk_QfindSlot
+00009fca   nwk_allocateLocalRxPort
+0000ad4c   nwk_buildFrame
+0000c348   nwk_checkConnInfo
+0000cc22   nwk_connectionControl
+0000c7f8   nwk_deviceAddress
+0000bc38   nwk_findPeer
+0000c5d0   nwk_frameInit
+0000cbfe   nwk_freeConnection
+0000cc04   nwk_getBCastAddress
+0000c214   nwk_getConnInfo
+0000ca06   nwk_getMyAddress
+0000cc26   nwk_getMyRxType
+0000bc74   nwk_getNextConnection
+0000cb46   nwk_getNumObjectFromMsg
+0000cc2a   nwk_getProtocolVersion
+0000c36e   nwk_globalsInit
+0000aba8   nwk_isConnectionValid
+0000bcb0   nwk_isLinkDuplicate
+0000bfaa   nwk_isValidReply
+00009a36   nwk_join
+0000c23c   nwk_joinInit
+00009484   nwk_link
+0000bfda   nwk_linkInit
+0000cb8c   nwk_mgmtInit
+0000aede   nwk_nwkInit
+0000cb96   nwk_pingInit
+0000cc2e   nwk_processFreq
+0000c88c   nwk_processJoin
+0000c488   nwk_processLink
+0000be76   nwk_processMgmt
+0000c3b8   nwk_processPing
+0000cc32   nwk_processSecurity
+0000c78e   nwk_putNumObjectIntoMsg
+0000b58e   nwk_radioControl
+0000c00a   nwk_rawReceive
+0000b6ee   nwk_rawSend
+0000a95a   nwk_retrieveFrame
+0000af60   nwk_sendAckReply
+0000c03a   nwk_sendFrame
+0000cb52   nwk_setAPAddress
+0000ca18   nwk_setJoinToken
+0000ca2a   nwk_setLinkToken
+0000c6aa   nwk_setMyAddress
+0000ca3c   open_radio
 00001f0a   p
 ffffffff   pinit
-0000c5ac   process_requests
+0000c4aa   process_requests
 00001f4e   ps_ok
 000020be   ptrMenu_L1
 000020bc   ptrMenu_L2
-0000c692   radio_ISR
-0000cba0   radio_powerdown
-0000bfd8   radio_reset
-0000ad2a   read_calibration_values
+0000c5b0   radio_ISR
+0000caa0   radio_powerdown
+0000bf14   radio_reset
+0000ac34   read_calibration_values
 00001fe2   request
-0000c98e   reset_alarm
-0000cb4e   reset_batt_measurement
-0000ccac   reset_buzzer
-0000c6d2   reset_clock
-0000cace   reset_date
-0000ccb6   reset_rf
-0000c6f2   reset_stopwatch
+0000c8a4   reset_alarm
+0000ca4e   reset_batt_measurement
+0000cba0   reset_buzzer
+0000c5f0   reset_clock
+0000c9ce   reset_date
+0000cbaa   reset_rf
+0000c610   reset_stopwatch
 00002061   rfBSL_button_confirmation
 00001fee   rf_frequoffset
 00002030   sAccel
@@ -1465,46 +1466,46 @@ ffffffff   pinit
 000020a8   sTemp
 00001ffe   sTime
 00002098   sTimer
-0000d0da   segments_bitmask
+0000cfd6   segments_bitmask
 00001e66   segments_lcdmem
-0000d126   selection_Timeformat
-0000cbcc   set_blink_rate
-00008416   set_value
+0000d022   selection_Timeformat
+0000cacc   set_blink_rate
+00008406   set_value
 00001eca   simpliciti_data
 00001eea   simpliciti_ed_address
 00001ec8   simpliciti_flag
-0000a84a   simpliciti_link
-0000a9b0   simpliciti_main_sync
+0000a762   simpliciti_link
+0000a8b8   simpliciti_main_sync
 00001eee   simpliciti_payload_length
 00001eef   simpliciti_reply_count
 00008000   simpliciti_sync_decode_ap_cmd_callback
-0000a61a   simpliciti_sync_get_data_callback
-0000cd0e   start_blink
-0000ba4e   start_buzzer
-0000adb6   start_simpliciti_sync
-0000c5f0   start_stopwatch
-0000ccee   stop_alarm
-0000cd14   stop_blink
-0000c712   stop_buzzer
-0000c914   stop_stopwatch
-00009ed0   stopwatch_tick
-0000cc5e   switch_seg
-0000c03c   sx_alarm
-0000b926   sx_rfbsl
-0000ca40   sx_stopwatch
-0000c7e6   sx_sync
+0000a3bc   simpliciti_sync_get_data_callback
+0000cc0a   start_blink
+0000b994   start_buzzer
+0000acc0   start_simpliciti_sync
+0000c4ee   start_stopwatch
+0000cbe2   stop_alarm
+0000cc10   stop_blink
+0000c630   stop_buzzer
+0000c812   stop_stopwatch
+00009e04   stopwatch_tick
+0000cbb4   switch_seg
+0000bf78   sx_alarm
+0000b824   sx_rfbsl
+0000c940   sx_stopwatch
+0000c6c8   sx_sync
 00001fe0   sys
-000090fe   test_mode
-0000ccc0   to_lpm
-0000b9bc   toggle_buzzer
-0000cc6a   update_alarm
-0000cc76   update_battery_voltage
-0000ccca   update_date
-0000cc82   update_stopwatch
-0000bdec   update_stopwatch_timer
-0000ccd4   update_time
-00009792   wakeup_event
-0000b5ce   write_lcd_mem
+00009086   test_mode
+0000cbea   to_lpm
+0000b8ba   toggle_buzzer
+0000cb5e   update_alarm
+0000cb6a   update_battery_voltage
+0000cbbe   update_date
+0000cb76   update_stopwatch
+0000bcec   update_stopwatch_timer
+0000cbc8   update_time
+000096fc   wakeup_event
+0000b640   write_lcd_mem
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -2283,8 +2284,8 @@ address    name
 0000207c   sBuzzer
 00002084   _lock
 00002088   _unlock
-0000208c   _cleanup_ptr
-00002090   _dtors_ptr
+0000208c   __TI_cleanup_ptr
+00002090   __TI_dtors_ptr
 00002094   fptr_Timer0_A3_function
 00002098   sTimer
 000020a0   brrx_packet_end_cap_value
@@ -2305,270 +2306,275 @@ address    name
 00008000   .text
 00008000   __text__
 00008000   simpliciti_sync_decode_ap_cmd_callback
-00008416   set_value
-00008634   mx_time
-00008828   PORT2_ISR
-00008a0e   mx_date
-00008bec   TIMER0_A0_ISR
-00008dc2   WriteRfSettings
-00008f68   MRFI_Init
-000090fe   test_mode
-00009268   display_time
-000093c8   SMPL_Link
-000093c8   nwk_link
-00009662   __fs_sub
-00009668   __fs_add
-00009792   wakeup_event
-000098bc   display_stopwatch
-000099e2   display_update
-00009af8   chronic_tx
-00009bf0   mx_alarm
-00009ce8   nwk_join
-00009ed0   stopwatch_tick
-00009fc0   nwk_QfindOldest
+00008406   set_value
+00008618   PORT2_ISR
+000087fe   TIMER0_A0_ISR
+000089de   mx_time
+00008bb2   WriteRfSettings
+00008d58   MRFI_Init
+00008ef2   mx_date
+00009086   test_mode
+000091e4   display_time
+00009484   SMPL_Link
+00009484   nwk_link
+000095cc   __fs_sub
+000095d2   __fs_add
+000096fc   wakeup_event
+00009822   display_stopwatch
+0000993e   chronic_tx
+00009a36   nwk_join
+00009c20   display_update
+00009d12   mx_alarm
+00009e04   stopwatch_tick
+00009eee   nwk_QfindOldest
+00009fca   nwk_allocateLocalRxPort
 0000a09c   display_chars
-0000a170   nwk_allocateLocalRxPort
-0000a242   display_date
-0000a30c   MRFI_Transmit
-0000a3d2   display_alarm
-0000a496   int_to_array
-0000a55a   init_application
-0000a61a   simpliciti_sync_get_data_callback
-0000a6da   do_tx
-0000a794   __fs_mpy
-0000a84a   simpliciti_link
-0000a8fe   SMPL_Ioctl
-0000a9b0   simpliciti_main_sync
-0000aa52   nwk_retrieveFrame
-0000aaee   Strobe
-0000ab84   __fs_div
-0000ac9e   nwk_isConnectionValid
-0000ad2a   read_calibration_values
-0000adb6   start_simpliciti_sync
-0000ae42   nwk_buildFrame
-0000aecc   config_doorbell
-0000af52   get_numberOfDays
-0000afd4   nwk_nwkInit
-0000b056   nwk_sendAckReply
-0000b0d2   TIMER0_A1_5_ISR
-0000b14c   nwk_QfindSlot
-0000b1c2   battery_measurement
-0000b236   display_char
-0000b2a8   mrfiRadioInterfaceCmdStrobe
-0000b31a   adc12_single_conversion
-0000b3ea   SMPL_SendOpt
-0000b450   MRFI_RadioIsr
-0000b4b2   Timer0_A4_Delay
-0000b512   display_battery_V
-0000b570   init_global_variables
-0000b5ce   write_lcd_mem
-0000b62c   WriteBurstPATable
-0000b688   clock_tick
-0000b6e4   clear_line
-0000b73e   nwk_radioControl
-0000b798   __divul
-0000b798   __remul
-0000b7f0   nwk_rawSend
-0000b842   add_day
-0000b88e   button_repeat_function
-0000b8da   __fs_toul
-0000b926   sx_rfbsl
-0000b972   __fs_cmp
-0000b9bc   toggle_buzzer
-0000ba06   SMPL_Receive
-0000ba4e   start_buzzer
-0000ba96   SetVCoreUp
-0000badc   _auto_init
-0000bb22   display_hours
-0000bb68   mrfiRadioInterfaceReadReg
-0000bbae   __fs_tou
-0000bbf4   WriteBurstReg
-0000bc7c   __divli
-0000bc7c   __remli
-0000bcfa   L_LSL_15
-0000bcfe   L_LSL_14
-0000bd02   L_LSL_13
-0000bd06   L_LSL_12
-0000bd0a   L_LSL_11
-0000bd0e   L_LSL_10
-0000bd12   L_LSL_9
-0000bd16   L_LSL_8
-0000bd1a   L_LSL_7
-0000bd1e   L_LSL_6
-0000bd22   L_LSL_5
-0000bd26   L_LSL_4
-0000bd2a   L_LSL_3
-0000bd2e   L_LSL_2
-0000bd32   L_LSL_1
-0000bd38   nwk_findPeer
-0000bd74   nwk_getNextConnection
-0000bdb0   nwk_isLinkDuplicate
-0000bdec   update_stopwatch_timer
-0000be28   WriteSingleReg
-0000be98   main
-0000bed0   nwk_processMgmt
-0000bf06   __fs_itof
-0000bf3c   MRFI_ReplyDelay
-0000bf70   mrfiRadioInterfaceWriteReg
-0000bfa4   mrfiRadioInterfaceWriteTxFifo
-0000bfd8   radio_reset
-0000c00a   __fs_ultof
-0000c03c   sx_alarm
-0000c06e   display_doorbell
-0000c09e   mrfiRadioInterfaceReadRxFifo
-0000c0ce   nwk_isValidReply
-0000c0fe   nwk_linkInit
-0000c12e   nwk_rawReceive
-0000c15e   nwk_sendFrame
-0000c1e8   SMPL_Init
-0000c214   nwk_QadjustOrder
-0000c240   __divi
-0000c240   __remi
-0000c26c   Timer0_A3_Start
-0000c296   _c_int00
-0000c296   _c_int00_noexit
-0000c2c0   display_rfbsl
-0000c2ea   lcd_init
-0000c33c   nwk_getConnInfo
-0000c364   nwk_joinInit
-0000c38c   SetVCore
-0000c3b2   SetVCoreDown
-0000c3fe   init_buttons
-0000c424   nwk_checkConnInfo
-0000c44a   nwk_globalsInit
-0000c470   MRFI_SetRxAddrFilter
-0000c494   MRFI_Sleep
-0000c4b8   memcmp
-0000c4dc   nwk_processPing
-0000c500   __fs_utof
-0000c524   BSP_Delay
-0000c546   MRFI_WakeUp
-0000c568   display_value
-0000c58a   nwk_processLink
-0000c5ac   process_requests
-0000c5ce   __mpyl_f5hw
-0000c5f0   start_stopwatch
-0000c612   MRFI_EnableRxAddrFilter
-0000c632   MRFI_RxCompleteISR
-0000c652   MRFI_RxIdle
-0000c672   MRFI_RxOn
-0000c692   radio_ISR
-0000c6b2   nwk_frameInit
-0000c6d2   reset_clock
-0000c6f2   reset_stopwatch
-0000c712   stop_buzzer
-0000c732   MRFI_SetLogicalChannel
-0000c76e   display_am_pm_symbol
-0000c78c   display_symbol
-0000c7aa   memmove
-0000c7c8   nwk_setMyAddress
-0000c7e6   sx_sync
-0000c804   MRFI_SetRFPwr
-0000c820   check_alarm
-0000c83c   clear_display_all
-0000c858   nwk_QInit
-0000c874   nwk_deviceAddress
-0000c890   nwk_putNumObjectIntoMsg
-0000c8e0   __mpyul_f5hw
-0000c8fa   ADC12ISR
-0000c914   stop_stopwatch
-0000c92e   chronic_config_rf
-0000c946   convert_hour_to_12H_format
-0000c95e   display_all_on
-0000c976   nwk_processJoin
-0000c98e   reset_alarm
-0000c9a6   MRFI_RandomByte
-0000c9d2   ReadSingleReg
-0000c9e8   button_repeat_on
-0000c9fe   display_selection_Timeformat1
-0000ca14   __divu
-0000ca14   __remu
-0000ca2a   __mpyi_f5hw
-0000ca40   sx_stopwatch
-0000ca56   Timer0_Init
-0000ca6a   countdown_buzzer
-0000ca7e   display_all_off
-0000ca92   display_sync
-0000caba   is_stopwatch
-0000cace   reset_date
-0000cae2   memcpy
-0000caf4   memset
-0000cb06   nwk_getMyAddress
-0000cb18   nwk_setJoinToken
-0000cb2a   nwk_setLinkToken
-0000cb3c   open_radio
-0000cb4e   reset_batt_measurement
-0000cb60   BSP_InitBoard
-0000cb70   MRFI_DelayMs
-0000cb80   ResetRadioCore
-0000cb90   close_radio
-0000cba0   radio_powerdown
-0000cbb0   is_hour_am
-0000cbbe   mx_stopwatch
-0000cbcc   set_blink_rate
-0000cbda   MRFI_PostKillSem
-0000cbe6   MRFI_Receive
-0000cbf2   Timer0_Stop
-0000cbfe   chronic_tx_down
-0000cc0a   chronic_tx_up
-0000cc16   clear_display
-0000cc2e   idle_loop
-0000cc3a   is_rf
-0000cc46   nwk_getNumObjectFromMsg
-0000cc52   nwk_setAPAddress
-0000cc5e   switch_seg
-0000cc6a   update_alarm
-0000cc76   update_battery_voltage
-0000cc82   update_stopwatch
-0000cc8e   button_repeat_off
-0000cc98   nwk_mgmtInit
-0000cca2   nwk_pingInit
-0000ccac   reset_buzzer
-0000ccb6   reset_rf
-0000ccc0   to_lpm
-0000ccca   update_date
-0000ccd4   update_time
-0000ccde   Timer0_A3_Stop
-0000cce6   Timer0_Start
-0000ccee   stop_alarm
-0000ccf6   MRFI_GetRadioState
-0000ccfc   clear_blink_mem
-0000cd02   nwk_freeConnection
-0000cd08   nwk_getBCastAddress
-0000cd0e   start_blink
-0000cd14   stop_blink
-0000cd1a   _system_pre_init
-0000cd1e   C$$EXIT
-0000cd1e   abort
-0000cd22   nwk_NVObj
-0000cd26   nwk_connectionControl
-0000cd2a   nwk_getMyRxType
-0000cd2e   nwk_getProtocolVersion
-0000cd32   nwk_processFreq
-0000cd36   nwk_processSecurity
-0000cd3a   _nop
-0000cd3c   dummy
-0000cd3e   __etext__
-0000cd3e   etext
-0000cd3e   int_to_array_conversion_table
-0000cf5e   menu_L2_Stopwatch
-0000cf70   menu_L1_Time
-0000cf82   menu_L1_Alarm
-0000cf94   menu_L1_Doorbell
-0000cfa6   menu_L2_Date
-0000cfb8   menu_L2_Battery
-0000cfca   menu_L2_Sync
-0000cfdc   menu_L2_RFBSL
-0000d06e   mrfiRadioCfg
-0000d0ae   lcd_font
-0000d0da   segments_bitmask
-0000d126   selection_Timeformat
-0000d12e   mrfiBroadcastAddr
-0000d136   BRRX__First_TXCB_t
-0000d138   BRRX__Last_TXCB_t
-0000d13e   method
-0000d142   __cinit__
-0000d142   cinit
+0000a16a   int_to_array
+0000a236   MRFI_Transmit
+0000a2fc   init_application
+0000a3bc   simpliciti_sync_get_data_callback
+0000a47c   display_date
+0000a53a   do_tx
+0000a5f4   display_alarm
+0000a6ac   __fs_mpy
+0000a762   simpliciti_link
+0000a810   SMPL_Ioctl
+0000a8b8   simpliciti_main_sync
+0000a95a   nwk_retrieveFrame
+0000a9f6   Strobe
+0000aa8e   __fs_div
+0000aba8   nwk_isConnectionValid
+0000ac34   read_calibration_values
+0000acc0   start_simpliciti_sync
+0000ad4c   nwk_buildFrame
+0000add6   config_doorbell
+0000ae5c   get_numberOfDays
+0000aede   nwk_nwkInit
+0000af60   nwk_sendAckReply
+0000afdc   TIMER0_A1_5_ISR
+0000b056   nwk_QfindSlot
+0000b0cc   mrfiRadioInterfaceCmdStrobe
+0000b140   display_char
+0000b1b2   battery_measurement
+0000b220   adc12_single_conversion
+0000b2f0   SMPL_SendOpt
+0000b356   MRFI_RadioIsr
+0000b3b8   Timer0_A4_Delay
+0000b41a   WriteBurstPATable
+0000b478   init_global_variables
+0000b4d6   clock_tick
+0000b532   display_battery_V
+0000b58e   nwk_radioControl
+0000b5e8   __divul
+0000b5e8   __remul
+0000b640   write_lcd_mem
+0000b698   clear_line
+0000b6ee   nwk_rawSend
+0000b740   add_day
+0000b78c   button_repeat_function
+0000b7d8   __fs_toul
+0000b824   sx_rfbsl
+0000b870   __fs_cmp
+0000b8ba   toggle_buzzer
+0000b904   SMPL_Receive
+0000b94c   _auto_init
+0000b994   start_buzzer
+0000b9dc   SetVCoreUp
+0000ba22   WriteBurstReg
+0000ba68   display_hours
+0000baae   __fs_tou
+0000baf4   mrfiRadioInterfaceReadReg
+0000bb7c   __divli
+0000bb7c   __remli
+0000bbfa   L_LSL_15
+0000bbfe   L_LSL_14
+0000bc02   L_LSL_13
+0000bc06   L_LSL_12
+0000bc0a   L_LSL_11
+0000bc0e   L_LSL_10
+0000bc12   L_LSL_9
+0000bc16   L_LSL_8
+0000bc1a   L_LSL_7
+0000bc1e   L_LSL_6
+0000bc22   L_LSL_5
+0000bc26   L_LSL_4
+0000bc2a   L_LSL_3
+0000bc2e   L_LSL_2
+0000bc32   L_LSL_1
+0000bc38   nwk_findPeer
+0000bc74   nwk_getNextConnection
+0000bcb0   nwk_isLinkDuplicate
+0000bcec   update_stopwatch_timer
+0000bd28   WriteSingleReg
+0000bd62   MRFI_ReplyDelay
+0000bdd2   main
+0000be0a   mrfiRadioInterfaceWriteReg
+0000be40   mrfiRadioInterfaceWriteTxFifo
+0000be76   nwk_processMgmt
+0000beac   __fs_itof
+0000bee2   mrfiRadioInterfaceReadRxFifo
+0000bf14   radio_reset
+0000bf46   __fs_ultof
+0000bf78   sx_alarm
+0000bfaa   nwk_isValidReply
+0000bfda   nwk_linkInit
+0000c00a   nwk_rawReceive
+0000c03a   nwk_sendFrame
+0000c06a   nwk_QadjustOrder
+0000c0c4   SMPL_Init
+0000c0f0   __divi
+0000c0f0   __remi
+0000c146   Timer0_A3_Start
+0000c170   _c_int00
+0000c170   _c_int00_noexit
+0000c19a   lcd_init
+0000c1c4   display_doorbell
+0000c214   nwk_getConnInfo
+0000c23c   nwk_joinInit
+0000c264   MRFI_Sleep
+0000c28a   SetVCore
+0000c2b0   SetVCoreDown
+0000c2d6   display_rfbsl
+0000c322   init_buttons
+0000c348   nwk_checkConnInfo
+0000c36e   nwk_globalsInit
+0000c394   MRFI_SetRxAddrFilter
+0000c3b8   nwk_processPing
+0000c3dc   __fs_utof
+0000c400   BSP_Delay
+0000c422   MRFI_WakeUp
+0000c444   display_value
+0000c466   memcmp
+0000c488   nwk_processLink
+0000c4aa   process_requests
+0000c4cc   __mpyl_f5hw
+0000c4ee   start_stopwatch
+0000c510   MRFI_EnableRxAddrFilter
+0000c530   MRFI_RxCompleteISR
+0000c550   MRFI_RxIdle
+0000c570   MRFI_RxOn
+0000c5b0   radio_ISR
+0000c5d0   nwk_frameInit
+0000c5f0   reset_clock
+0000c610   reset_stopwatch
+0000c630   stop_buzzer
+0000c650   MRFI_SetLogicalChannel
+0000c66e   display_symbol
+0000c68c   memmove
+0000c6aa   nwk_setMyAddress
+0000c6c8   sx_sync
+0000c6e6   MRFI_SetRFPwr
+0000c71e   check_alarm
+0000c73a   clear_display_all
+0000c756   display_am_pm_symbol
+0000c772   nwk_QInit
+0000c78e   nwk_putNumObjectIntoMsg
+0000c7c4   __mpyul_f5hw
+0000c7de   ADC12ISR
+0000c7f8   nwk_deviceAddress
+0000c812   stop_stopwatch
+0000c82c   ReadSingleReg
+0000c844   chronic_config_rf
+0000c85c   convert_hour_to_12H_format
+0000c874   display_all_on
+0000c88c   nwk_processJoin
+0000c8a4   reset_alarm
+0000c8bc   MRFI_RandomByte
+0000c8e8   button_repeat_on
+0000c8fe   display_selection_Timeformat1
+0000c914   __divu
+0000c914   __remu
+0000c92a   __mpyi_f5hw
+0000c940   sx_stopwatch
+0000c956   Timer0_Init
+0000c96a   countdown_buzzer
+0000c97e   display_all_off
+0000c992   display_sync
+0000c9ba   is_stopwatch
+0000c9ce   reset_date
+0000c9e2   memcpy
+0000c9f4   memset
+0000ca06   nwk_getMyAddress
+0000ca18   nwk_setJoinToken
+0000ca2a   nwk_setLinkToken
+0000ca3c   open_radio
+0000ca4e   reset_batt_measurement
+0000ca60   BSP_InitBoard
+0000ca70   MRFI_DelayMs
+0000ca80   ResetRadioCore
+0000ca90   close_radio
+0000caa0   radio_powerdown
+0000cab0   is_hour_am
+0000cabe   mx_stopwatch
+0000cacc   set_blink_rate
+0000cada   MRFI_PostKillSem
+0000cae6   MRFI_Receive
+0000caf2   Timer0_Stop
+0000cafe   chronic_tx_down
+0000cb0a   chronic_tx_up
+0000cb16   clear_display
+0000cb2e   idle_loop
+0000cb3a   is_rf
+0000cb46   nwk_getNumObjectFromMsg
+0000cb52   nwk_setAPAddress
+0000cb5e   update_alarm
+0000cb6a   update_battery_voltage
+0000cb76   update_stopwatch
+0000cb82   button_repeat_off
+0000cb8c   nwk_mgmtInit
+0000cb96   nwk_pingInit
+0000cba0   reset_buzzer
+0000cbaa   reset_rf
+0000cbb4   switch_seg
+0000cbbe   update_date
+0000cbc8   update_time
+0000cbd2   Timer0_A3_Stop
+0000cbda   Timer0_Start
+0000cbe2   stop_alarm
+0000cbea   to_lpm
+0000cbf2   MRFI_GetRadioState
+0000cbf8   clear_blink_mem
+0000cbfe   nwk_freeConnection
+0000cc04   nwk_getBCastAddress
+0000cc0a   start_blink
+0000cc10   stop_blink
+0000cc16   _system_pre_init
+0000cc1a   C$$EXIT
+0000cc1a   abort
+0000cc1e   nwk_NVObj
+0000cc22   nwk_connectionControl
+0000cc26   nwk_getMyRxType
+0000cc2a   nwk_getProtocolVersion
+0000cc2e   nwk_processFreq
+0000cc32   nwk_processSecurity
+0000cc36   _nop
+0000cc38   dummy
+0000cc3a   __etext__
+0000cc3a   etext
+0000cc3a   int_to_array_conversion_table
+0000ce59   method
+0000ce5a   menu_L2_Stopwatch
+0000ce6c   menu_L1_Time
+0000ce7e   menu_L1_Alarm
+0000ce90   menu_L1_Doorbell
+0000cea2   menu_L2_Date
+0000ceb4   menu_L2_Battery
+0000cec6   menu_L2_Sync
+0000ced8   menu_L2_RFBSL
+0000cf6a   mrfiRadioCfg
+0000cfaa   lcd_font
+0000cfd6   segments_bitmask
+0000d022   selection_Timeformat
+0000d02a   mrfiBroadcastAddr
+0000d032   BRRX__First_TXCB_t
+0000d034   BRRX__Last_TXCB_t
+0000d03a   __cinit__
+0000d03a   cinit
+0000ffe0   __TI_int48
+0000ffea   __TI_int53
+0000ffec   __TI_int54
+0000ffee   __TI_int55
+0000fff0   __TI_int56
 0000fffe   _reset_vector
 ffffffff   __binit__
 ffffffff   __c_args__
@@ -2576,4 +2582,4 @@ ffffffff   __pinit__
 ffffffff   binit
 ffffffff   pinit
 
-[1064 symbols]
+[1069 symbols]

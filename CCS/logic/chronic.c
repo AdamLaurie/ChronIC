@@ -330,7 +330,7 @@ void config_doorbell(u8 line)
 // do the actual transmission and maintain FIFO
 void do_tx(unsigned char *data, unsigned char packet_length, unsigned long total_length)
 {
-	unsigned char *p= data;
+	unsigned char *p= data, state;
 	unsigned long remaining= total_length - (unsigned long) packet_length; // one packet already in FIFO
 
 	if (total_length > 255L)
@@ -355,7 +355,7 @@ void do_tx(unsigned char *data, unsigned char packet_length, unsigned long total
 	// wait for TX to end & fill FIFO if required
 	// strictly speaking we should also check if we need to come out of infinite mode but
 	// it's just extra logic (i.e. code space) and we'll stop when FIFO is empty anyway, so why bother?
-	while((ReadSingleReg(MARCSTATE) & MASK_MARCSTATE) != MARCSTATE_TX_END)
+	while(((state= ReadSingleReg(MARCSTATE) & MASK_MARCSTATE)) != MARCSTATE_TX_END && state != MARCSTATE_IDLE)
 	{
 		while(remaining && (ReadSingleReg(TXBYTES) & MASK_TXBYTES) < FIFO_CAPACITY)
 		{
