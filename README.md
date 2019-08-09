@@ -5,7 +5,7 @@ A wearable Sub-GHz RF hacking tool.
 
 Latest version:
 
-  https://github.com/ApertureLabsLtd/ChronIC
+  https://github.com/AdamLaurie/ChronIC
 
 Based on the EZ430 Chronos project from Texas Instruments:
 
@@ -18,7 +18,7 @@ component of the Chronos dev kit:
 
 A worked example of hacking my doorbell can be found here:
 
-  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html
+  http://adamsblog.rfidiot.org/2013/03/you-can-ring-my-bell-adventures-in-sub.html
 
 INSTALLATION
 ============
@@ -46,7 +46,7 @@ Windows.
 
 Checkout latest code from github:
 
-  git clone git://github.com/ApertureLabsLtd/ChronIC.git
+  git clone git://github.com/AdamLaurie/ChronIC.git
 
 Start CCStudio and import the project from the CCS sub-folder of the repo:
 
